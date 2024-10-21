@@ -1,0 +1,932 @@
+/* Global Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+} 
+
+mark {
+  background: transparent;
+  color: #25a59e;
+}
+
+p {
+  color: #595959;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  color: #a6a6a6;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+input:focus {
+  outline: none;
+}
+
+
+.heading {
+  color: #262626;
+  font-family: "Gilda Display";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+
+#main-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrapper {
+  width: 100%;
+  max-width: 100rem;
+}
+
+/* nav style  */
+
+header {
+  display: flex;
+  /* width: 1200px; */
+  justify-content: space-between;
+  align-items: center;
+  /* background: aliceblue; */
+  padding: 2rem 80px;
+}
+.logo a {
+  color: #25a59e;
+  font-family: "Gilda Display";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}
+
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.close-icon {
+  display: none;
+}
+
+nav ul li a {
+  color: #000;
+  font-family: "Gilda Display";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}
+
+.mobile-view {
+  display: none;
+}
+/* nav responsive  */
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  header {
+    padding: 16px 20px;
+  }
+  .logo a{
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+  nav {
+    display: none;
+    width: 60%;
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+  }
+  nav ul {
+    flex-direction: column;
+    padding: 20px;
+    align-items: start;
+    justify-content: start;
+  }
+  .close-icon {
+    /* display: inline; */
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  .mobile-view {
+    display: block;
+  }
+}
+
+/* hero section style  */
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 80px;
+  /* position: relative; */
+}
+.hero-banner h1 {
+  max-width: 1080px;
+  color: #262626;
+  text-align: center;
+  font-family: "Gilda Display";
+  font-size: 170px;
+  line-height: 170px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  /* line-height: 170px;  */
+}
+.image-container {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  /* background-image: url('../images/image-banner.png');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+   justify-content: center; */
+}
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.heading-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.content-container {
+  display: flex;
+  width: 100%;
+  padding: 40px;
+  align-items: center;
+  gap: 30px;
+  background: var(--Brand-600, #25a59e);
+  /* position: absolute;
+bottom: 14%; */
+}
+
+.divider {
+  height: 30px;
+  width: 1px;
+  background: #fff;
+}
+
+.content-container p {
+  font-family: "Urbanist", sans-serif;
+  flex: 35%;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  /* background: #000; */
+}
+
+.content-container h3 {
+  width: 30%;
+  color: #fff;
+  text-align: center;
+  font-family: "Gilda Display";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 142.857% */
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 0 20px;
+}
+
+/* hero section responsive design for mobile */
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .hero-banner {
+    padding: 50px 0 0 0;
+  }
+  .image-container {
+    height: 400px;
+  }
+  .hero-banner h1 {
+    width: 370px;
+    font-size: 52px;
+    line-height: normal;
+    /* margin-top: 50px; */
+  }
+  .heading-container{
+    top: 16%;
+  }
+  .content-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+  /* .divider{
+        width: 100%;
+        height: 1px;
+    } */
+  .content-container p {
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: normal;
+  }
+  .content-container h3 {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+}
+
+/* hero section responsive design for tablet */
+
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .hero-banner {
+    padding: 0px !important;
+    /* background-color: green; */
+  }
+  .content-container {
+    padding: 1rem 3rem !important;
+  }
+}
+
+/* destination section design  */
+
+.destinaions {
+  background: #fff;
+  /* margin-top: -120px; */
+  position: relative;
+  z-index: 99;
+  padding: 80px;
+}
+
+
+
+.destination-upper {
+  display: flex;
+  width: 100%;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.destinaions .left {
+  width: 500px;
+}
+.destinaions .right {
+  width: 40%;
+}
+
+
+.headingFirst::after{
+    content: 'Find your best destination';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    color: #262626;
+    z-index: -1;
+}
+.headingSecond::after{
+    content: 'Why must choose us';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    color: #262626;
+    z-index: -1;
+
+}
+
+.headingThird::after{
+    content: 'Travel, make the trip memorable';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    color: #262626;
+    z-index: -1;
+
+}
+
+/* destination search component  */
+
+.input {
+  display: flex;
+  width: 100%;
+  padding: 8px 8px 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+  margin-top: 20px;
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.search {
+  background: #ee8f39;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search i {
+  color: #fff;
+}
+
+/* destination card component  */
+
+.destination-cards {
+  width: 100%;
+  display: flex;
+  gap: 37px;
+  flex-wrap: wrap;
+  /* padding:0 80px; */
+  padding-top: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.destination-card {
+  flex: 0 0 31%;
+  min-width: 300px;
+  display: flex;
+  padding: 16px 16px 36px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  box-shadow: 105.45px 50.41px 78.04px 0px rgba(55, 54, 100, 0.05),
+    -55.45px 50.409px 98px 0px rgba(55, 54, 100, 0.04);
+}
+
+.destination-image {
+  height: 70%;
+  width: 100%;
+}
+
+.destination-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.destination-name {
+  color: #262626;
+  font-family: "Urbanist";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  padding-bottom: 8px;
+}
+
+.destinaion-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #262626;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.destinaion-location i {
+  color: #25a59e;
+}
+
+/* destination section responsive design for mobile device  */
+
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .destinaions {
+    padding: 50px 20px;
+  }
+  .destination-upper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .destinaions .left,
+  .destinaions .right {
+    width: 100%;
+  }
+  .heading {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .input {
+    padding: 6px 6px 6px 16px;
+  }
+  .input .flex svg{
+    height: 24px;
+    width: 24px;
+  }
+  .input input{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .search{
+    height: 44px;
+    width: 44px;
+  }
+  .search svg{
+    height: 20px;
+    width: 20px;
+  }
+  .destination-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: start;
+    padding-bottom: 30px;
+    padding-top: 28px;
+  }
+  ::-webkit-scrollbar {
+    height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #25a59e;
+    border-radius: 20px;
+  }
+  .destination-card{
+    min-width: 100%;
+    height: 378px;
+    padding: 12px 12px 24px 12px;
+  }
+}
+
+/* destination section responsive design for tablet  */
+
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .destinaions {
+    padding: 3rem;
+  }
+  .input {
+    width: 100%;
+  }
+  /* .destination-card{
+        width: 245px;
+    } */
+}
+
+/* whyChoose section design  */
+
+.whyChoose-section {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.whyChoose-section p{
+    text-align: center;
+
+}
+.whyChoose-section ul p {
+  width: 100%;
+  color: #737373;
+}
+
+.whyChoose-cards ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.whyChoose-cards li {
+  position: relative;
+  z-index: 1;
+}
+.whyChoose-cards li::after {
+  content: "";
+  height: 0%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #25a59e;
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+.whyChoose-cards li:hover:after {
+  height: 100%;
+}
+.whyChoose-cards li h3,
+.whyChoose-cards li p,
+.whyChoose-cards li .d-flex a,
+.whyChoose-cards li .d-flex i {
+  position: relative;
+  z-index: 2;
+  transition: all 0.6s ease-in-out;
+}
+.whyChoose-cards li:hover h3,
+.whyChoose-cards li:hover p,
+.whyChoose-cards li:hover .d-flex a,
+.whyChoose-cards li:hover .d-flex i {
+  color: #fff;
+}
+.whyChoosecard {
+  /* height: 300px; */
+  min-width: 300px;
+  flex: 0 0 32%;
+  box-shadow: 10px 26px 150px 0px rgba(67, 67, 100, 0.1);
+  padding: 28px 20px 32px 20px;
+  border-top: 4px solid #25a59e;
+}
+.whyChoose-upper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.whyChoose-upper h2 {
+  text-align: center;
+}
+.whyChoosecard p {
+  text-align: start;
+  line-height: 25px;
+  padding: 8px 0;
+}
+
+.whyChoosecard h3 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 62px;
+  font-family: "Gilda Display";
+  color: #262626;
+}
+.whyChoosecard .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  padding-top: calc(40px - 8px);
+}
+.whyChoosecard .d-flex a{
+    font-weight: bold;
+}
+.whyChoosecard .d-flex a,
+.d-flex i {
+  font-size: 20px;
+  color: #25a59e;
+  font-family: "Gilda Display";
+}
+
+/* whyChoose section responsive design for mobile device  */
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .whyChoose-section {
+    padding: 50px 20px;
+  }
+
+  .whyChoosecard {
+    min-width: 100%;
+  }
+  .whyChoose-section ul p,
+  .whyChoosecard .d-flex a,
+  .whyChoosecard .d-flex i {
+    font-size: 15px !important;
+  }
+  .whyChoosecard h3 {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .whyChoose-upper{
+    width: 95%;
+  }
+}
+
+/* whyChoose section responsive design for laptop  */
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .whyChoose-section,
+  .offerSection,
+  footer {
+    padding: 3rem !important;
+  }
+  /* .whyChoosecard {
+        height: 350px;
+        width: 245px;
+    } */
+}
+
+/* memoriableTrip section design  */
+
+.memoriableTrip {
+  display: flex;
+  padding: 80px;
+}
+
+.memoriableTrip .left,
+.memoriableTrip .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.memoriableTrip .left {
+  align-items: start;
+  gap: 40px;
+}
+.memoriableTrip .image-container {
+  /* height: 350px;
+    width: 450px; */
+  height: auto;
+  width: 100%;
+  background-image: url("../images/Shape.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 90% auto;
+}
+
+.memoriableTrip .image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: #25a59e;
+  width: fit-content;
+  height: fit-content;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  padding-top: 30px;
+  align-items: center;
+}
+.btn a {
+  color: #fff;
+  font-size: 16px;
+  font-family: Urbanist;
+}
+
+.discoverMore {
+  color: #333333;
+  text-decoration: underline;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* memoriableTrip section responsive design for mobile device */
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .memoriableTrip {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+  .memoriableTrip .left,
+  .memoriableTrip .right {
+    width: 100%;
+    gap: 12px;
+  }
+  .memoriableTrip .image-container {
+    /* height: 200px;
+        width: 250px; */
+    padding-top: 20px;
+  }
+  .buttons {
+    display: none;
+  }
+}
+
+/* memoriableTrip section responsive design for tablet */
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .memoriableTrip {
+    padding: 3rem;
+  }
+}
+
+.tripdocumentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  align-items: center;
+  padding: 80px 0;
+}
+.tripdocumentation h2 {
+  text-align: center;
+  width: 60%;
+}
+.video-container {
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+.video-icon{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 999;
+}
+
+.video-icon svg{
+  height: 131px;
+  width: 131px;
+}
+
+.video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.offerSection {
+  padding: 80px 80px 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .video-container {
+    height: 300px;
+  }
+  .tripdocumentation h2 {
+    width: 90%;
+  }
+  .tripdocumentation {
+    padding: 3rem 0;
+  }
+  .offerSection {
+    padding: 50px 20px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+  }
+  .video-icon svg{
+    height: 60px;
+    width: 60px;
+  }
+  
+}
+
+footer {
+  border-top: 1px solid #d9d9d9;
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  padding-top: 48px;
+}
+
+.social-links a,
+.col2 i {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  background: #eafaf9;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500%;
+  color: #25a59e;
+  font-size: 25px;
+}
+
+.quick-links ul {
+  display: flex;
+  gap: 60px;
+}
+.col {
+  width: 300px;
+}
+
+.col p {
+  padding-top: 24px;
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 40px;
+  justify-content: end;
+}
+.col2 i {
+  background-color: #8c8c8c;
+  color: #fff;
+  box-shadow: 0px 4px 96px #423e3a;
+}
+
+.quick-links a {
+  color: #595959;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: Urbanist;
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  footer {
+    flex-direction: column;
+    padding: 3rem 1rem;
+    position: relative;
+  }
+  .quick-links {
+    width: 100%;
+    padding-top: 2rem;
+  }
+  .col {
+    width: 100%;
+  }
+  .col2 {
+    align-items: center;
+  }
+  .col2 i {
+    position: absolute;
+    top: 56%;
+    right: 1rem;
+  }
+  .quick-links ul {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
